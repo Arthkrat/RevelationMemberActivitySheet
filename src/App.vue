@@ -1,0 +1,57 @@
+<template>
+  <v-app id="inspire">
+
+    <v-app-bar
+      app
+      class="grey darken-2"
+      dark
+    >
+        <v-toolbar-title @click.stop="show" class="ml-4 display-2" pointer>MENU</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn flat to="/centaur" class="ma-2 d-none d-md-flex" tile>Centaur</v-btn>
+        <v-btn flat to="/agate" class="ma-2 d-none d-md-flex" tile>Agate</v-btn>
+        <v-btn flat to="/activity" class="ma-2 d-none d-md-flex" tile>Activity</v-btn>
+    </v-app-bar>
+
+    <v-content class="grey darken-4">
+        <router-view></router-view>
+    </v-content>
+    <v-menu 
+      v-model="showMenu"
+      :position-x="x"
+      :position-y="y"
+      absolute
+      offset-y>
+      <v-list class="pa-2 grey darken-4">
+        <v-list-item>
+          <add-new-member></add-new-member>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+  </v-app>
+</template>
+
+<script>
+import AddNewMemeber from './components/Activity/ModalAddNewMate'
+export default {
+  name: 'App',
+  data: () => ({
+    showMenu: false,
+    x: 0,
+    y: 0,
+    }),
+  components: {
+    "add-new-member" : AddNewMemeber
+  },
+  methods: {
+    show (e) {
+            this.showMenu = false
+            this.x = e.clientX
+            this.y = e.clientY
+            this.$nextTick(() => {
+            this.showMenu = true
+            })
+        },
+  }
+};
+</script>

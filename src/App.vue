@@ -6,8 +6,9 @@
       class="grey darken-2"
       dark
     >
-        <v-toolbar-title @click.stop="show" class="ml-4 display-2" pointer>MENU</v-toolbar-title>
+        <v-toolbar-title @click.stop="showMainMenu" class="ml-4 display-2" pointer>MENU</v-toolbar-title>
         <v-spacer></v-spacer>
+        <v-btn flat to="/mainpage" class="ma-2 d-none d-md-flex" tile>Main Page</v-btn>
         <v-btn flat to="/centaur" class="ma-2 d-none d-md-flex" tile>Centaur</v-btn>
         <v-btn flat to="/agate" class="ma-2 d-none d-md-flex" tile>Agate</v-btn>
         <v-btn flat to="/activity" class="ma-2 d-none d-md-flex" tile>Activity</v-btn>
@@ -32,7 +33,7 @@
 </template>
 
 <script>
-import AddNewMemeber from './components/Activity/ModalAddNewMate'
+import AddNewMember from './components/Shared/ModalAddNewMate'
 export default {
   name: 'App',
   data: () => ({
@@ -41,10 +42,10 @@ export default {
     y: 0,
     }),
   components: {
-    "add-new-member" : AddNewMemeber
+    "add-new-member" : AddNewMember
   },
   methods: {
-    show (e) {
+    showMainMenu (e) {
             this.showMenu = false
             this.x = e.clientX
             this.y = e.clientY

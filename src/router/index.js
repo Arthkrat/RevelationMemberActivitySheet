@@ -3,13 +3,14 @@ import VueRouter from 'vue-router'
 import Activity from '../components/Activity/Activity'
 import Centaur from '../components/Centaur/Centaur'
 import Agate from '../components/Agate/Agate'
+import MainPage from '../components/MainPage/MainPage'
 Vue.use(VueRouter)
 
 const routes = [
 
   {
     path: '/',
-    redirect: '/activity',
+    redirect: '/mainpage',
   },
   {
     path: '/centaur',
@@ -25,6 +26,10 @@ const routes = [
     path: '/activity',
     name: 'activity',
     component: Activity
+  },
+  {
+    path: '/mainpage',
+    component: MainPage
   }
 ]
 

@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Activity from '../components/Activity/Activity'
-import Centaur from '../components/Centaur/Centaur'
-import Agate from '../components/Agate/Agate'
-import MainPage from '../components/MainPage/MainPage'
+import Activity from '../components/Pages/Activity'
+import Centaur from '../components/Pages/Centaur'
+import Agate from '../components/Pages/Agate'
+import MainPage from '../components/Pages/MainPage'
 Vue.use(VueRouter)
 
 const routes = [

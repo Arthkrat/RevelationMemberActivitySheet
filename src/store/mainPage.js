@@ -34,14 +34,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'amber lighten-1'
@@ -53,14 +105,66 @@ export default {
                 dragon: false,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -72,14 +176,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'light-blue lighten-1'
@@ -91,14 +247,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'light-green darken-1'
@@ -110,14 +318,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'lime accent-1'
@@ -129,14 +389,66 @@ export default {
                 dragon: false,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -148,14 +460,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'amber lighten-1'
@@ -167,14 +531,66 @@ export default {
                 dragon: false,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -186,14 +602,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'light-blue lighten-1'
@@ -205,14 +673,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'light-green darken-1'
@@ -224,14 +744,66 @@ export default {
                 dragon: true,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'lime accent-1'
@@ -243,14 +815,66 @@ export default {
                 dragon: false,
                 month: {
                     january: {
-                        activitySiege: 2,
-                        activityOrz: 2,
-                        activityAgaddon: 2,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     },
                     february: {
-                        activitySiege: 1,
-                        activityOrz: 1,
-                        activityAgaddon: 1,
+                        activityOrz: {
+                            '6' : {
+                                presence: false
+                            },
+                            '13' : {
+                                presence: true
+                            },
+                            '20' : {
+                                presence: true
+                            },
+                            '27' : {
+                                presence: false
+                            }
+                        },
+                        
+                        activitySiege: {
+                            '8' : {
+                                presence: false
+                            },
+                            '15' : {
+                                presence: true
+                            },
+                            '22' : {
+                                presence: true
+                            }, 
+                            '29' : {
+                                presence: false
+                            }
+                        }
                     }
                 },
                 classColor: 'deep-orange lighten-3'

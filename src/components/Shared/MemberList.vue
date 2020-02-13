@@ -18,7 +18,7 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <v-col v-if="orz">
-                   <span>ORZ</span> 
+                   <span>ORZ {{`${datePicked}/${monthPicked}`}}</span> 
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <v-col v-if="siege">
@@ -60,23 +60,26 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <v-col v-if="orz">
-                   <span>{{mate.month[`${monthPicked}`].activityOrz}}</span>
+                   <span>{{mate.month[`${monthPickedString}`].activityOrz[+`${datePicked}`].presence}}</span>
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <v-col v-if="siege">
-                   <span>{{mate.month[`${monthPicked}`].activitySiege}}</span>
+                   <!-- <span>{{mate.month[`${monthPickedString}`].activitySiege[+`${datePicked}`].presence}}</span> -->
                 </v-col>
                 <v-divider vertical class="white" v-if="siege"></v-divider>
                 <v-col v-if="agaddon">
-                   <span>{{mate.month[`${monthPicked}`].activityAgaddon}}</span>
+                   <!-- <span>{{mate.month[`${monthPickedString}`][`${datePicked}`].activityAgaddon}}</span> -->
                 </v-col>
                 <v-divider vertical class="white" v-if="agaddon"></v-divider>
-                <v-col v-if="percent" @click="consolee()">
+                <v-col v-if="percent" @click="consolee(Number(mate.month[`${monthPickedString}`].activityOrz[+`${datePicked}`].presence))">
                    <span >
-                       {{`${(mate.month[`${monthPicked}`].activityOrz + 
-                       mate.month[`${monthPicked}`].activitySiege +
-                       mate.month[`${monthPicked}`].activityAgaddon)/10*100}%`}}
+                       {{`${(mate.month[`${monthPickedString}`].activityOrz + 
+                       mate.month[`${monthPickedString}`].activitySiege +
+                       mate.month[`${monthPickedString}`].activityAgaddon)/10*100}%`}}
                     </span>
+                </v-col>
+                <v-col v-if="orzPercent">
+                    <span>{{}}</span>
                 </v-col>
             </v-row>
 
@@ -146,12 +149,32 @@ export default {
             default: false
         },
         monthPicked: {
-            type: String,
-            default: 'january'
+            type: String
+        },
+        datePicked: {
+            type: String
         }
     },
     computed: {
         ...mapGetters(['mates']),
+        monthPickedString() {
+            switch(this.monthPicked) {
+                case '01' : return 'january'
+                case '02' : return 'february'
+                case '03' : return 'march'
+                case '04' : return 'april'
+                case '05' : return 'may'
+                case '06' : return 'june'
+                case '07' : return 'juli'
+                case '08' : return 'august'
+                case '09' : return 'september'
+                case '10' : return 'october'
+                case '11' : return 'november'
+                case '12' : return 'december'
+            }
+            return true
+        }
+        
     }
 }
 </script>

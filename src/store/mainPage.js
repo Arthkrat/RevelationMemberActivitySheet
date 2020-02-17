@@ -249,7 +249,6 @@ export default {
                 for (let countClass of state.counter) {
                     if(mate.class === countClass.name) {
                         countClass.count += 1
-                        console.log(countClass.count)
                     }
                 }
             

@@ -1,5 +1,5 @@
 <template>
-    <v-col class="grey darken-2 white--text pt-0 pb-0"> 
+    <v-col class="grey darken-2 white--text"> 
         <v-row  class="text-center">
                 <v-col v-if="member">
                     <span>Member</span>
@@ -37,7 +37,7 @@
             <v-divider class="white" v-if="memberClass"></v-divider>
             
             <v-row  v-for="(mate, index) in mates" :key="`mate-${index}`" class="text-center" >
-                <v-col @click.stop="show" :class="`${mate.classColor} black--text pa-4`" v-if="member" >
+                <v-col @click.stop="show" :class="`${mate.classColor} black--text`" v-if="member" >
                     <span @click="showMe(mate)">
                         {{mate.name}}
                     </span>
@@ -59,7 +59,7 @@
                         <v-icon dark color="white" center v-if="mate.dragon">mdi-checkbox-marked-circle</v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
-                <v-col v-if="orz" class="pa-4">
+                <v-col v-if="orz">
                    <v-icon>{{thumbIcon(mate.event.activityOrz[`${date}`])}}</v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
@@ -73,8 +73,6 @@
                 <v-divider vertical class="white" v-if="agaddon"></v-divider>
                 <v-col v-if="percent" >
                    <span>
-                       
-                       
                        {{getActivityPercent(mate)}}
                     </span>
                 </v-col>

@@ -24,7 +24,7 @@
                         light v-model="dates"
                         multiple
                         :close-on-content-click="false"
-                        @click:date="cons"
+                        :allowed-dates="allowedDays"
                         >
                         </v-date-picker>
                     </v-menu>
@@ -40,8 +40,7 @@
             <v-col cols="1" v-for="(date, i) in dates" :key="`${i}-date`">
                 <member-list
                 :orz="true"
-                :monthPicked="pickedMonth(date)"
-                :datePicked="pickedDate(date)"
+                :date="date"
                 >
                 </member-list>
             </v-col>
@@ -56,6 +55,7 @@
     </div>
 </template>
 <script>
+import moment from 'moment'
 import {mapGetters} from 'vuex'
 import MemberList from '../Shared/MemberList'
 export default {
@@ -66,19 +66,12 @@ export default {
         ...mapGetters(['mates'])
     },
     data: () => ({
-      dates: [new Date().toISOString().substr(0, 10)],
+      dates: [],
       menu2: false
     }),
     methods: {
-        pickedMonth(date) {
-                return date.split('-', 2)[1]
-        },
-        pickedDate(date) {
-            return date.substr(8, 10)
-        },
-        cons() {
-            // eslint-disable-next-line no-console
-            console.log(this.dates)
+    allowedDays(val) {
+           return moment(val).format('dddd, MMMM Do YYYY').split(',')[0] === 'Thursday'
         }
     }
 }

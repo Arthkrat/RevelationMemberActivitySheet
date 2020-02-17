@@ -1,5 +1,5 @@
 <template>
-    <v-col class="grey darken-2 white--text"> 
+    <v-col class="grey darken-2 white--text pt-0 pb-0"> 
         <v-row  class="text-center">
                 <v-col v-if="member">
                     <span>Member</span>
@@ -18,7 +18,7 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <v-col v-if="orz">
-                   <span>ORZ {{`${datePicked}/${monthPicked}`}}</span> 
+                   <span>{{date}}</span> 
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <v-col v-if="siege">
@@ -38,7 +38,7 @@
             
             <v-row  v-for="(mate, index) in mates" :key="`mate-${index}`" class="text-center" >
                 <v-col @click.stop="show" :class="`${mate.classColor} black--text`" v-if="member" >
-                    <span @click="showMe(mate.month)">
+                    <span @click="showMe(mate)">
                         {{mate.name}}
                     </span>
                 </v-col>
@@ -60,7 +60,7 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <v-col v-if="orz">
-                   <!-- <span>{{mate.month[`${monthPickedString}`].activityOrz[+`${datePicked}`].presence}}</span> -->
+                   <v-icon>{{thumbIcon(mate.event.activityOrz[`${date}`])}}</v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <v-col v-if="siege">
@@ -75,9 +75,6 @@
                    <span>
                        {{getActivityPercent(mate)}}
                     </span>
-                </v-col>
-                <v-col v-if="orzPercent">
-                    <span>{{}}</span>
                 </v-col>
             </v-row>
 
@@ -114,7 +111,7 @@ export default {
                 if(mate.event.activityOrz[`${date}`])
                 activityPercent++
             }
-            return activityPercent / this.percent.length
+            return Math.floor((activityPercent / this.percent.length) * 100) + '%'  
         },
         show (e) {
             this.showMenu = false
@@ -127,6 +124,9 @@ export default {
         consolee(a) {
             // eslint-disable-next-line no-console
             console.log(a)
+        },
+        thumbIcon(thumb) {
+            return thumb ? `mdi-thumb-up` : `mdi-thumb-down`
         }
     },
     props: {
@@ -154,10 +154,7 @@ export default {
         percent: {
             type: Array
         },
-        monthPicked: {
-            type: String
-        },
-        datePicked: {
+        date: {
             type: String
         }
     },
@@ -179,7 +176,7 @@ export default {
                 case '12' : return 'december'
             }
             return true
-        },
+        }
 
         
     }

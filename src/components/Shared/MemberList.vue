@@ -73,6 +73,8 @@
                 <v-divider vertical class="white" v-if="agaddon"></v-divider>
                 <v-col v-if="percent" >
                    <span>
+                       
+                       
                        {{getActivityPercent(mate)}}
                     </span>
                 </v-col>

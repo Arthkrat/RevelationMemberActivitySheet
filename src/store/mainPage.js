@@ -32,68 +32,12 @@ export default {
                 bm: '600',
                 class: 'Knight',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : true,
+                        '2020-02-20' : true,
+                        '2020-02-27' : true
                     }
                 },
                 classColor: 'amber lighten-1'
@@ -103,68 +47,12 @@ export default {
                 bm: '575',
                 class: 'Mage',
                 dragon: false,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : false,
+                        '2020-02-20' : true,
+                        '2020-02-27' : true
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -174,68 +62,12 @@ export default {
                 bm: '650',
                 class: 'Assasin',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : false,
+                        '2020-02-13' : true,
+                        '2020-02-20' : true,
+                        '2020-02-27' : false
                     }
                 },
                 classColor: 'light-blue lighten-1'
@@ -245,68 +77,12 @@ export default {
                 bm: '700',
                 class: 'Druid',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : false,
+                        '2020-02-20' : false,
+                        '2020-02-27' : true
                     }
                 },
                 classColor: 'light-green darken-1'
@@ -316,68 +92,12 @@ export default {
                 bm: '600',
                 class: 'Guard',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : false,
+                        '2020-02-13' : true,
+                        '2020-02-20' : false,
+                        '2020-02-27' : true
                     }
                 },
                 classColor: 'lime accent-1'
@@ -387,68 +107,12 @@ export default {
                 bm: '600',
                 class: 'Gunner',
                 dragon: false,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : false,
+                        '2020-02-20' : true,
+                        '2020-02-27' : true
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -458,68 +122,12 @@ export default {
                 bm: '600',
                 class: 'Knight',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : true,
+                        '2020-02-20' : true,
+                        '2020-02-27' : false
                     }
                 },
                 classColor: 'amber lighten-1'
@@ -529,68 +137,12 @@ export default {
                 bm: '575',
                 class: 'Mage',
                 dragon: false,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : false,
+                        '2020-02-20' : true,
+                        '2020-02-27' : true
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -600,68 +152,12 @@ export default {
                 bm: '650',
                 class: 'Assasin',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : false,
+                        '2020-02-13' : false,
+                        '2020-02-20' : true,
+                        '2020-02-27' : true
                     }
                 },
                 classColor: 'light-blue lighten-1'
@@ -671,68 +167,12 @@ export default {
                 bm: '700',
                 class: 'Druid',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : false,
+                        '2020-02-13' : false,
+                        '2020-02-20' : false,
+                        '2020-02-27' : false
                     }
                 },
                 classColor: 'light-green darken-1'
@@ -742,68 +182,12 @@ export default {
                 bm: '600',
                 class: 'Guard',
                 dragon: true,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : true,
+                        '2020-02-20' : true,
+                        '2020-02-27' : false
                     }
                 },
                 classColor: 'lime accent-1'
@@ -813,68 +197,12 @@ export default {
                 bm: '600',
                 class: 'Gunner',
                 dragon: false,
-                month: {
-                    january: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
-                    },
-                    february: {
-                        activityOrz: {
-                            '6' : {
-                                presence: false
-                            },
-                            '13' : {
-                                presence: true
-                            },
-                            '20' : {
-                                presence: true
-                            },
-                            '27' : {
-                                presence: false
-                            }
-                        },
-                        
-                        activitySiege: {
-                            '8' : {
-                                presence: false
-                            },
-                            '15' : {
-                                presence: true
-                            },
-                            '22' : {
-                                presence: true
-                            }, 
-                            '29' : {
-                                presence: false
-                            }
-                        }
+                event: {
+                    activityOrz: {
+                        '2020-02-06' : true,
+                        '2020-02-13' : false,
+                        '2020-02-20' : true,
+                        '2020-02-27' : false
                     }
                 },
                 classColor: 'deep-orange lighten-3'

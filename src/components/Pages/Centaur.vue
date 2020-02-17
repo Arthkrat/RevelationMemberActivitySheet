@@ -24,6 +24,7 @@
                         light v-model="dates"
                         multiple
                         :close-on-content-click="false"
+                        @click:date="cons"
                         >
                         </v-date-picker>
                     </v-menu>
@@ -44,16 +45,25 @@
                 >
                 </member-list>
             </v-col>
-            
+            <v-col cols="1" v-if="dates.length">
+                <member-list
+                :percent="dates"
+                >
+                </member-list>
+            </v-col>
         </v-row>
 
     </div>
 </template>
 <script>
+import {mapGetters} from 'vuex'
 import MemberList from '../Shared/MemberList'
 export default {
     components: {
         'member-list' : MemberList
+    },
+    computed: {
+        ...mapGetters(['mates'])
     },
     data: () => ({
       dates: [new Date().toISOString().substr(0, 10)],
@@ -66,12 +76,10 @@ export default {
         pickedDate(date) {
             return date.substr(8, 10)
         },
-        formatDate (date) {
-        if (!date) return null
-
-        const [year, month, day] = date.split('-')
-        return `${day}/${month}/${year}`
-      },
+        cons() {
+            // eslint-disable-next-line no-console
+            console.log(this.dates)
+        }
     }
 }
 

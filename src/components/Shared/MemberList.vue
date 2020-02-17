@@ -60,7 +60,7 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <v-col v-if="orz">
-                   <span>{{mate.month[`${monthPickedString}`].activityOrz[+`${datePicked}`].presence}}</span>
+                   <!-- <span>{{mate.month[`${monthPickedString}`].activityOrz[+`${datePicked}`].presence}}</span> -->
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <v-col v-if="siege">
@@ -71,11 +71,9 @@
                    <!-- <span>{{mate.month[`${monthPickedString}`][`${datePicked}`].activityAgaddon}}</span> -->
                 </v-col>
                 <v-divider vertical class="white" v-if="agaddon"></v-divider>
-                <v-col v-if="percent" @click="consolee(Number(mate.month[`${monthPickedString}`].activityOrz[+`${datePicked}`].presence))">
-                   <span >
-                       {{`${(mate.month[`${monthPickedString}`].activityOrz + 
-                       mate.month[`${monthPickedString}`].activitySiege +
-                       mate.month[`${monthPickedString}`].activityAgaddon)/10*100}%`}}
+                <v-col v-if="percent" >
+                   <span>
+                       {{getActivityPercent(mate)}}
                     </span>
                 </v-col>
                 <v-col v-if="orzPercent">
@@ -110,6 +108,14 @@ export default {
       y: 0,    
       }),
     methods: {
+        getActivityPercent(mate) {
+            let activityPercent = 0
+            for(let date of this.percent) {
+                if(mate.event.activityOrz[`${date}`])
+                activityPercent++
+            }
+            return activityPercent / this.percent.length
+        },
         show (e) {
             this.showMenu = false
             this.x = e.clientX
@@ -146,7 +152,7 @@ export default {
             default: false
         },
         percent: {
-            default: false
+            type: Array
         },
         monthPicked: {
             type: String
@@ -173,7 +179,8 @@ export default {
                 case '12' : return 'december'
             }
             return true
-        }
+        },
+
         
     }
 }

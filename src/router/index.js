@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Activity from '../components/Pages/Activity'
 import Centaur from '../components/Pages/Centaur'
-import AddORZ from '../components/Pages/AddOrz'
 import Agate from '../components/Pages/Agate'
 import MainPage from '../components/Pages/MainPage'
 import AddOrz from '../components/Pages/AddOrz'
@@ -22,11 +21,6 @@ const routes = [
     path: '/centaur',
     name: 'centaur',
     component: Centaur
-  },
-  {
-    path: '/addORZ',
-    name: 'addORZ',
-    component: AddORZ
   },
   {
     path: '/agate',

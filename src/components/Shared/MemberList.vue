@@ -1,7 +1,7 @@
 <template>
     <v-col class="grey darken-2 white--text"> 
         <v-row  class="text-center">
-                <v-col v-if="member">
+                <v-col v-if="member || memberCheck">
                     <span>Member</span>
                 </v-col>
                 <v-divider vertical class="white" v-if="member"></v-divider>
@@ -42,6 +42,14 @@
                         {{mate.name}}
                     </span>
                 </v-col>
+                <v-col :class="`${mate.classColor} black--text`" v-if="memberCheck">
+                    <v-checkbox v-model="mate.event.activityOrz[`${date}`]" 
+                    :label="mate.name"
+                    color="black"
+                    class="ma-0 pa-0"
+                    hide-details
+                    ></v-checkbox>
+                </v-col>
                 <v-divider vertical class="white" v-if="member"></v-divider>
                 <v-col v-if="memberClass" :class="`${mate.classColor} black--text`">
                     <span >
@@ -60,7 +68,7 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <v-col v-if="orz">
-                   <v-icon>{{thumbIcon(mate.event.activityOrz[`${date}`])}}</v-icon>
+                   <v-icon size='20px' :class="[mate.event.activityOrz[`${date}`] ? 'green--text text--darken-1' : 'red--text text--darken-1']">{{thumbIcon(mate.event.activityOrz[`${date}`])}}</v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <v-col v-if="siege">
@@ -71,7 +79,7 @@
                    <!-- <span>{{mate.month[`${monthPickedString}`][`${datePicked}`].activityAgaddon}}</span> -->
                 </v-col>
                 <v-divider vertical class="white" v-if="agaddon"></v-divider>
-                <v-col v-if="percent" >
+                <v-col v-if="percent">
                    <span>
                        {{getActivityPercent(mate)}}
                     </span>
@@ -131,6 +139,9 @@ export default {
     },
     props: {
         member: {
+            default: false
+        },
+        memberCheck: {
             default: false
         },
         memberClass: {

@@ -43,7 +43,7 @@
                     </span>
                 </v-col>
                 <v-col :class="`${mate.classColor} black--text`" v-if="memberCheck">
-                    <v-checkbox v-model="mate.event.activityOrz[`${date}`]" 
+                    <v-checkbox :v-model="compareMember(mate.name, date)" 
                     :label="mate.name"
                     color="black"
                     class="ma-0 pa-0"

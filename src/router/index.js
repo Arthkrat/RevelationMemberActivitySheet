@@ -5,6 +5,7 @@ import Centaur from '../components/Pages/Centaur'
 import AddORZ from '../components/Pages/AddORZ'
 import Agate from '../components/Pages/Agate'
 import MainPage from '../components/Pages/MainPage'
+import AddOrz from '../components/Pages/AddOrz'
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,6 +13,10 @@ const routes = [
   {
     path: '/',
     redirect: '/mainpage',
+  },
+  {
+    path: '/addorz',
+    component: AddOrz
   },
   {
     path: '/centaur',

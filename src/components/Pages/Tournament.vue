@@ -51,7 +51,6 @@
                 </member-list>
             </v-col>
         </v-row>
-
     </div>
 </template>
 <script>
@@ -71,9 +70,8 @@ export default {
     }),
     methods: {
     allowedDays(val) {
-           return moment(val).format('dddd, MMMM Do YYYY').split(',')[0] === 'Thursday'
+           return moment(val).format('dddd, MMMM Do YYYY').split(',')[0] === 'Friday'
         }
     }
 }
-
 </script>

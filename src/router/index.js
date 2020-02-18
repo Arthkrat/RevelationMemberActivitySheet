@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Activity from '../components/Pages/Activity'
-import Centaur from '../components/Pages/Centaur'
+import Tournament from '../components/Pages/Tournament'
+import Orz from '../components/Pages/Orz'
 import Agate from '../components/Pages/Agate'
 import MainPage from '../components/Pages/MainPage'
 import AddOrz from '../components/Pages/AddOrz'
@@ -18,9 +18,9 @@ const routes = [
     component: AddOrz
   },
   {
-    path: '/centaur',
+    path: '/orz',
     name: 'centaur',
-    component: Centaur
+    component: Orz
   },
   {
     path: '/agate',
@@ -28,9 +28,9 @@ const routes = [
     component: Agate
   },
   {
-    path: '/activity',
+    path: '/tournament',
     name: 'activity',
-    component: Activity
+    component: Tournament
   },
   {
     path: '/mainpage',

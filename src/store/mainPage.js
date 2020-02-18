@@ -253,11 +253,19 @@ export default {
                 }
             
             }
+        },
+        changeDateActivityOrz(state, payload) {
+            for (let mate of state.mates) {
+                mate.event.activityOrz[`${payload.date}`] = payload.status
+            }
         }
     },
     actions: {
         CLASSCOUNT(context) {
             context.commit('classCount')
+        },
+        CHANGEDATEACTIVITYORZ({commit}, payload) {
+            commit('changeDateActivityOrz', payload)
         }
     }
 }

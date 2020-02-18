@@ -9,9 +9,9 @@
         <v-toolbar-title @click.stop="showMainMenu" class="ml-4 display-2" pointer>MENU</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn flat to="/mainpage" class="ma-2 d-none d-md-flex" tile>Main Page</v-btn>
-        <v-btn flat to="/centaur" class="ma-2 d-none d-md-flex" tile>ORZ</v-btn>
+        <v-btn flat to="/orz" class="ma-2 d-none d-md-flex" tile>ORZ</v-btn>
         <v-btn flat to="/agate" class="ma-2 d-none d-md-flex" tile>Agate</v-btn>
-        <v-btn flat to="/activity" class="ma-2 d-none d-md-flex" tile>Activity</v-btn>
+        <v-btn flat to="/tournament" class="ma-2 d-none d-md-flex" tile>Tournament</v-btn>
     </v-app-bar>
 
     <v-content class="grey darken-4">

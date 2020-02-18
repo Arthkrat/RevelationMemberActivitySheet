@@ -68,7 +68,7 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <v-col v-if="orz">
-                   <v-icon size='20px' :class="[mate.event.activityOrz[`${date}`] ? 'green--text text--darken-1' : 'red--text text--darken-1']">{{thumbIcon(mate.event.activityOrz[`${date}`])}}</v-icon>
+                   <v-icon size='20px' :class="[compareMember(mate.name, date) ? 'green--text text--darken-1' : 'red--text text--darken-1']">{{thumbIcon(compareMember(mate.name, date))}}</v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <v-col v-if="siege">
@@ -100,7 +100,6 @@
                 <v-list-item class="red justify-center" >DELETE</v-list-item>
             </v-list>
         </v-menu> 
-
     </v-col>
 </template>
 <script>
@@ -113,10 +112,13 @@ export default {
       y: 0,    
       }),
     methods: {
+         compareMember(mate, date) {
+         return this.getOrz(date).presence.indexOf(mate) !== -1 ? true : false
+         },
         getActivityPercent(mate) {
             let activityPercent = 0
             for(let date of this.percent) {
-                if(mate.event.activityOrz[`${date}`])
+                if(this.getOrz(date).presence.indexOf(mate.name) !== -1)
                 activityPercent++
             }
             return Math.floor((activityPercent / this.percent.length) * 100) + '%'  
@@ -170,26 +172,7 @@ export default {
         }
     },
     computed: {
-        ...mapGetters(['mates']),
-        monthPickedString() {
-            switch(this.monthPicked) {
-                case '01' : return 'january'
-                case '02' : return 'february'
-                case '03' : return 'march'
-                case '04' : return 'april'
-                case '05' : return 'may'
-                case '06' : return 'june'
-                case '07' : return 'juli'
-                case '08' : return 'august'
-                case '09' : return 'september'
-                case '10' : return 'october'
-                case '11' : return 'november'
-                case '12' : return 'december'
-            }
-            return true
-        }
-
-        
+        ...mapGetters(['mates', 'getOrz']),
     }
 }
 </script>

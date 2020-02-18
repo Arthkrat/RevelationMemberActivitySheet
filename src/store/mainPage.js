@@ -38,6 +38,12 @@ export default {
                         '2020-02-13' : true,
                         '2020-02-20' : true,
                         '2020-02-27' : true
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'amber lighten-1'
@@ -53,6 +59,12 @@ export default {
                         '2020-02-13' : false,
                         '2020-02-20' : true,
                         '2020-02-27' : true
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -68,6 +80,12 @@ export default {
                         '2020-02-13' : true,
                         '2020-02-20' : true,
                         '2020-02-27' : false
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'light-blue lighten-1'
@@ -83,6 +101,12 @@ export default {
                         '2020-02-13' : false,
                         '2020-02-20' : false,
                         '2020-02-27' : true
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'light-green darken-1'
@@ -98,6 +122,12 @@ export default {
                         '2020-02-13' : true,
                         '2020-02-20' : false,
                         '2020-02-27' : true
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'lime accent-1'
@@ -113,6 +143,12 @@ export default {
                         '2020-02-13' : false,
                         '2020-02-20' : true,
                         '2020-02-27' : true
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -128,6 +164,12 @@ export default {
                         '2020-02-13' : true,
                         '2020-02-20' : true,
                         '2020-02-27' : false
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'amber lighten-1'
@@ -143,6 +185,12 @@ export default {
                         '2020-02-13' : false,
                         '2020-02-20' : true,
                         '2020-02-27' : true
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'light-blue lighten-3'
@@ -158,6 +206,12 @@ export default {
                         '2020-02-13' : false,
                         '2020-02-20' : true,
                         '2020-02-27' : true
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'light-blue lighten-1'
@@ -173,6 +227,12 @@ export default {
                         '2020-02-13' : false,
                         '2020-02-20' : false,
                         '2020-02-27' : false
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'light-green darken-1'
@@ -188,6 +248,12 @@ export default {
                         '2020-02-13' : true,
                         '2020-02-20' : true,
                         '2020-02-27' : false
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'lime accent-1'
@@ -203,6 +269,12 @@ export default {
                         '2020-02-13' : false,
                         '2020-02-20' : true,
                         '2020-02-27' : false
+                    },
+                    tournament: {
+                        '2020-02-07' : true,
+                        '2020-02-14' : false,
+                        '2020-02-21' : true,
+                        '2020-02-28' : false
                     }
                 },
                 classColor: 'deep-orange lighten-3'

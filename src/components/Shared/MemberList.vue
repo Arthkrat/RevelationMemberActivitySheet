@@ -43,8 +43,9 @@
                     </span>
                 </v-col>
                 <v-col :class="`${mate.classColor} black--text`" v-if="memberCheck">
-                    <v-checkbox :v-model="compareMember(mate.name, date)" 
+                    <v-checkbox v-model="checkValue"
                     :label="mate.name"
+                    :value="mate.name"
                     color="black"
                     class="ma-0 pa-0"
                     hide-details
@@ -109,7 +110,7 @@ export default {
     data: () => ({
       showMenu: false,
       x: 0,
-      y: 0,    
+      y: 0,
       }),
     methods: {
          compareMember(mate, date) {
@@ -169,7 +170,8 @@ export default {
         },
         date: {
             type: String
-        }
+        },
+        checkValue: Array
     },
     computed: {
         ...mapGetters(['mates', 'getOrz']),

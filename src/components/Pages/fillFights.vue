@@ -255,9 +255,9 @@ export default {
     this.presence = this.getOrz(this.date).presence;
   },
   methods: {
-    getColor (calories) {
-        if (calories > 400) return 'red'
-        else if (calories > 200) return 'orange'
+    getColor (color) {
+        if (color > 400) return 'red'
+        else if (color > 200) return 'orange'
         else return 'green'
       },
     changeDate(){

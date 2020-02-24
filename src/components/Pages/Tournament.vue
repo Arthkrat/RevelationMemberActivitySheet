@@ -37,16 +37,17 @@
                 >
                 </member-list>
             </v-col>
-            <v-col cols="1" v-for="(date, i) in dates" :key="`${i}-date`">
+            <v-col cols="2" v-for="(date, i) in dates" :key="`${i}-date`">
                 <member-list
-                :orz="true"
+                :tournament="true"
                 :date="date"
                 >
                 </member-list>
             </v-col>
-            <v-col cols="1" v-if="dates.length">
+            <v-col cols="2" v-if="dates.length">
                 <member-list
-                :percent="dates"
+                :datesArray="dates"
+                event="tournament"
                 >
                 </member-list>
             </v-col>

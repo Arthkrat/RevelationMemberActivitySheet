@@ -29,7 +29,7 @@ const routes = [
   },
   {
     path: '/tournament',
-    name: 'activity',
+    name: 'tournament',
     component: Tournament
   },
   {

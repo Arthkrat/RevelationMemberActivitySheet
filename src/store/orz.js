@@ -1,6 +1,6 @@
 export default {
     state: {
-        ORZ: {
+        orz: {
             '2020-02-06': {
                 presence: [
                     'Kratos', 'Acakura', 'Deadzone', 'РыбаФугу'
@@ -29,7 +29,7 @@ export default {
     },
     getters: {
         getOrz: state => date => {
-            return state.ORZ[`${date}`]
+            return state.orz[`${date}`]
           }
     }
 }

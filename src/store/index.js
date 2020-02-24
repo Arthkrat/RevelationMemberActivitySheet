@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import agate from './agate'
 import mainPage from './mainPage'
 import orz from './orz'
-import activity from './activity'
+import tournament from './tournament'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -11,6 +11,6 @@ export default new Vuex.Store({
     mainPage,
     agate,
     orz,
-    activity
+    tournament
   }
 })

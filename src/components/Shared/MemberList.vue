@@ -5,43 +5,64 @@
                     <span>Member</span>
                 </v-col>
                 <v-divider vertical class="white" v-if="member"></v-divider>
+
                 <v-col class="text-center" v-if="memberClass">
                     <span >Class</span>
                 </v-col>
                 <v-divider vertical class="white" v-if="memberClass"></v-divider>
+                
                 <v-col v-if="bm"  class="text-center">
                     <span>BM</span>
                 </v-col>
                 <v-divider vertical class="white" v-if="bm"></v-divider>
+
                 <v-col v-if="dragon" class="text-center">
                     <span>Dragon</span>
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
+
                 <v-col v-if="orz">
                    <span>{{date}}</span> 
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
+
                 <v-col v-if="siege">
                     <span> SIEGE </span> 
                 </v-col>
                 <v-divider vertical class="white" v-if="siege"></v-divider>
+
                 <v-col v-if="agaddon">
                     <span> AGADDON </span> 
                 </v-col>
                 <v-divider vertical class="white" v-if="agaddon"></v-divider>
-                <v-col v-if="percent">
+
+                <v-col v-if="datesArray">
                     <span> Activity percent </span>
+                </v-col>
+
+                <v-col v-if="tournament" class="pa-0">
+                    <p class="text-center mb-0 mt-n3">
+                        <span>{{date}}</span>
+                    </p>
+                    <v-row>
+                        <v-col class="pb-0">First</v-col>
+                        <v-col class="pb-0">Second</v-col>
+                        <v-col class="pb-0">Stock</v-col>
+                    </v-row>
+                    
                 </v-col>
             </v-row>
 
             <v-divider class="white" v-if="memberClass"></v-divider>
             
             <v-row  v-for="(mate, index) in mates" :key="`mate-${index}`" class="text-center" >
+
                 <v-col @click.stop="show" :class="`${mate.classColor} black--text`" v-if="member" >
                     <span @click="showMe(mate)">
                         {{mate.name}}
                     </span>
                 </v-col>
+
                 <v-col :class="`${mate.classColor} black--text`" v-if="memberCheck">
                     <v-checkbox v-model="mate.event.activityOrz[`${date}`]" 
                     :label="mate.name"
@@ -51,39 +72,73 @@
                     ></v-checkbox>
                 </v-col>
                 <v-divider vertical class="white" v-if="member"></v-divider>
+
                 <v-col v-if="memberClass" :class="`${mate.classColor} black--text`">
                     <span >
                         {{mate.class}}
                     </span>
                 </v-col>
                 <v-divider vertical class="white" v-if="memberClass"></v-divider>
+
                 <v-col v-if="bm">
                     <span class="text-center">
                         {{mate.bm}}
                     </span>
                 </v-col>
+
                 <v-divider vertical class="white" v-if="bm"></v-divider>
+
                 <v-col v-if="dragon">
                         <v-icon dark color="white" center v-if="mate.dragon">mdi-checkbox-marked-circle</v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
+                <!--    ORZ       -->
                 <v-col v-if="orz">
-                   <v-icon size='20px' :class="[compareMember(mate.name, date) ? 'green--text text--darken-1' : 'red--text text--darken-1']">{{thumbIcon(compareMember(mate.name, date))}}</v-icon>
+                   <v-icon size='20px' :class="[compareMemberOrz(mate.name, date) ? 'green--text text--darken-1' : 'red--text text--darken-1']">{{thumbIcon(compareMemberOrz(mate.name, date))}}</v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
+                <!--    SIEGE       -->
                 <v-col v-if="siege">
                    <!-- <span>{{mate.month[`${monthPickedString}`].activitySiege[+`${datePicked}`].presence}}</span> -->
                 </v-col>
                 <v-divider vertical class="white" v-if="siege"></v-divider>
+                <!--    AGADDON       -->
                 <v-col v-if="agaddon">
                    <!-- <span>{{mate.month[`${monthPickedString}`][`${datePicked}`].activityAgaddon}}</span> -->
                 </v-col>
                 <v-divider vertical class="white" v-if="agaddon"></v-divider>
-                <v-col v-if="percent">
+                <!-- ACTIVITY PERCENT ORZ-->
+                <v-col v-if="datesArray && event === 'orz'">
                    <span>
-                       {{getActivityPercent(mate)}}
+                       {{getActivityPercentOrz(mate)}}
                     </span>
                 </v-col>
+                <!-- ACTIVITY PERCENT TOURNAMENT-->
+                <v-col v-if="datesArray && event === 'tournament'">
+                    <span>{{getActivityPercentTournament(mate.name)}}</span>
+                </v-col>
+                <!-- TOURNAMENT -->
+                <v-row v-if="tournament">
+                    <v-col>
+                        <v-icon size='20px' 
+                            :class="[compareMemberTournament(mate.name, date, 1) ? 'green--text text--darken-1' : 'red--text text--darken-1']">
+                            {{thumbIcon(compareMemberTournament(mate.name, date, 1))}}
+                        </v-icon>
+                    </v-col>
+                    <v-col>
+                        <v-icon size='20px' 
+                            :class="[compareMemberTournament(mate.name, date, 2) ? 'green--text text--darken-1' : 'red--text text--darken-1']">
+                            {{thumbIcon(compareMemberTournament(mate.name, date, 2))}}
+                        </v-icon>
+                    </v-col>
+                    <v-col>
+                        <v-icon size='20px' 
+                            :class="[compareMemberTournament(mate.name, date, 'stock') ? 'green--text text--darken-1' : 'red--text text--darken-1']">
+                            {{thumbIcon(compareMemberTournament(mate.name, date, 'stock'))}}
+                        </v-icon>
+                    </v-col>
+                </v-row>
+
             </v-row>
 
         <v-menu
@@ -112,16 +167,36 @@ export default {
       y: 0,    
       }),
     methods: {
-         compareMember(mate, date) {
-         return this.getOrz(date).presence.indexOf(mate) !== -1 ? true : false
-         },
-        getActivityPercent(mate) {
+        compareMemberOrz(mate, date) {
+            return this.getOrz(date).presence.indexOf(mate) !== -1 ? true : false
+        },
+        compareMemberTournament(mate, date, fightNumber) {
+            if(fightNumber === 1)
+                return Object.keys(this.getTournament(date).presence.firstFight).indexOf(mate) !== -1 ? true : false
+            else if (fightNumber === 2)
+                return Object.keys(this.getTournament(date).presence.secondFight).indexOf(mate) !== -1 ? true : false
+            else if (fightNumber === 'stock')
+                return this.getTournament(date).presence.stock.indexOf(mate) !== -1 ? true : false
+        },
+        getActivityPercentOrz(mate) {
+                let activityPercent = 0
+                for(let date of this.datesArray) {
+                    if(this.getOrz(date).presence.indexOf(mate.name) !== -1)
+                    activityPercent++
+                }
+                return Math.floor((activityPercent / this.datesArray.length) * 100) + '%'
+        },
+        getActivityPercentTournament(mate) {
             let activityPercent = 0
-            for(let date of this.percent) {
-                if(this.getOrz(date).presence.indexOf(mate.name) !== -1)
-                activityPercent++
+            for(let date of this.datesArray) {
+                if(
+                Object.keys(this.getTournament(date).presence.firstFight).indexOf(mate) !== -1 ||
+                Object.keys(this.getTournament(date).presence.secondFight).indexOf(mate) !== -1 ||
+                this.getTournament(date).presence.stock.indexOf(mate) !== -1
+                )
+                    activityPercent +=1
             }
-            return Math.floor((activityPercent / this.percent.length) * 100) + '%'  
+               return Math.floor((activityPercent / this.datesArray.length) * 100) + '%'
         },
         show (e) {
             this.showMenu = false
@@ -164,15 +239,21 @@ export default {
         agaddon: {
             default: false
         },
-        percent: {
+        datesArray: {
             type: Array
         },
         date: {
             type: String
+        },
+        event: {
+            type: String
+        },
+        tournament: {
+            default: false
         }
     },
     computed: {
-        ...mapGetters(['mates', 'getOrz']),
+        ...mapGetters(['mates', 'getOrz', 'getTournament'])
     }
 }
 </script>

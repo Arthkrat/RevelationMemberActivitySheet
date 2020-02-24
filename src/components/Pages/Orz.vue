@@ -46,7 +46,8 @@
             </v-col>
             <v-col cols="1" v-if="dates.length">
                 <member-list
-                :percent="dates"
+                :datesArray="dates"
+                event="orz"
                 >
                 </member-list>
             </v-col>

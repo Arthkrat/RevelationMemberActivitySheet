@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Tournament from '../components/Pages/Tournament'
 import Orz from '../components/Pages/Orz'
-import Agate from '../components/Pages/Agate'
+import Siege from '../components/Pages/Siege'
 import MainPage from '../components/Pages/MainPage'
 import AddOrz from '../components/Pages/AddOrz'
 Vue.use(VueRouter)
@@ -23,9 +23,9 @@ const routes = [
     component: Orz
   },
   {
-    path: '/agate',
-    name: 'agate',
-    component: Agate
+    path: '/siege',
+    name: 'siege',
+    component: Siege
   },
   {
     path: '/tournament',

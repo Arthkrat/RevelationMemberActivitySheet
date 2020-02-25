@@ -10,7 +10,7 @@
         <v-spacer></v-spacer>
         <v-btn flat to="/mainpage" class="ma-2 d-none d-md-flex" tile>Main Page</v-btn>
         <v-btn flat to="/orz" class="ma-2 d-none d-md-flex" tile>ORZ</v-btn>
-        <v-btn flat to="/agate" class="ma-2 d-none d-md-flex" tile>Agate</v-btn>
+        <v-btn flat to="/siege" class="ma-2 d-none d-md-flex" tile>Siege</v-btn>
         <v-btn flat to="/tournament" class="ma-2 d-none d-md-flex" tile>Tournament</v-btn>
     </v-app-bar>
 

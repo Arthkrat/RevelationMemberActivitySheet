@@ -26,8 +26,16 @@
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
 
-                <v-col v-if="siege">
-                    <span> SIEGE </span> 
+                <v-col v-if="siege" class="pa-0">
+                    <v-row class="justify-center"> {{date}} </v-row> 
+                    <v-row>
+                        <v-col class="pa-0">
+                            <span>First</span>
+                        </v-col>
+                        <v-col class="pa-0">
+                            <span>Second</span>
+                        </v-col>
+                    </v-row>
                 </v-col>
                 <v-divider vertical class="white" v-if="siege"></v-divider>
 
@@ -94,13 +102,30 @@
                 <v-divider vertical class="white" v-if="dragon"></v-divider>
                 <!--    ORZ       -->
                 <v-col v-if="orz">
-                   <v-icon size='20px' :class="[compareMemberOrz(mate.name, date) ? 'green--text text--darken-1' : 'red--text text--darken-1']">{{thumbIcon(compareMemberOrz(mate.name, date))}}</v-icon>
+                    <v-icon size='20px' 
+                    :class="[compareMemberOrz(mate.name, date) ? 'green--text text--darken-1' : 'red--text text--darken-1']"
+                    >
+                       {{thumbIcon(compareMemberOrz(mate.name, date))}}
+                    </v-icon>
                 </v-col>
                 <v-divider vertical class="white" v-if="orz"></v-divider>
                 <!--    SIEGE       -->
-                <v-col v-if="siege">
-                   <!-- <span>{{mate.month[`${monthPickedString}`].activitySiege[+`${datePicked}`].presence}}</span> -->
-                </v-col>
+                <v-row v-if="siege">
+                    <v-col>
+                        <v-icon size='20px' 
+                        :class="[compareMemberSiege(mate.name, date, 'first') ? 'green--text text--darken-1' : 'red--text text--darken-1']"
+                        >
+                            {{thumbIcon(compareMemberSiege(mate.name, date, 'first'))}}
+                        </v-icon>
+                    </v-col>
+                    <v-col><v-icon size='20px' 
+                        :class="[compareMemberSiege(mate.name, date, 'second') ? 'green--text text--darken-1' : 'red--text text--darken-1']"
+                        >
+                            {{thumbIcon(compareMemberSiege(mate.name, date, 'second'))}}
+                        </v-icon>
+                    </v-col>
+                    
+                </v-row>
                 <v-divider vertical class="white" v-if="siege"></v-divider>
                 <!--    AGADDON       -->
                 <v-col v-if="agaddon">
@@ -116,6 +141,10 @@
                 <!-- ACTIVITY PERCENT TOURNAMENT-->
                 <v-col v-if="datesArray && event === 'tournament'">
                     <span>{{getActivityPercentTournament(mate.name)}}</span>
+                </v-col>
+                <!-- ACTIVITY PERCENT SIEGE -->
+                <v-col v-if="datesArray && event === 'siege'">
+                    <span>{{getActivityPercentSiege(mate.name)}}</span>
                 </v-col>
                 <!-- TOURNAMENT -->
                 <v-row v-if="tournament">
@@ -170,6 +199,12 @@ export default {
         compareMemberOrz(mate, date) {
             return this.getOrz(date).presence.indexOf(mate) !== -1 ? true : false
         },
+        compareMemberSiege(mate, date, hourNumber) {
+            if(hourNumber === 'first')
+                return this.getSiege(date).presence.firstHour.indexOf(mate) !== -1 ? true : false
+            else if(hourNumber === 'second')
+                return this.getSiege(date).presence.secondHour.indexOf(mate) !== -1 ? true : false
+        },
         compareMemberTournament(mate, date, fightNumber) {
             if(fightNumber === 1)
                 return Object.keys(this.getTournament(date).presence.firstFight).indexOf(mate) !== -1 ? true : false
@@ -197,6 +232,15 @@ export default {
                     activityPercent +=1
             }
                return Math.floor((activityPercent / this.datesArray.length) * 100) + '%'
+        },
+        getActivityPercentSiege(mate) {
+            let activityPercent = 0
+            this.datesArray.map(date => {
+                if( this.getSiege(date).presence.firstHour.indexOf(mate) !== -1 || 
+                    this.getSiege(date).presence.secondHour.indexOf(mate) !== -1)
+                        activityPercent++
+            })
+            return Math.floor((activityPercent / this.datesArray.length) * 100) + '%'
         },
         show (e) {
             this.showMenu = false
@@ -253,7 +297,7 @@ export default {
         }
     },
     computed: {
-        ...mapGetters(['mates', 'getOrz', 'getTournament'])
+        ...mapGetters(['mates', 'getOrz', 'getTournament', 'getSiege'])
     }
 }
 </script>

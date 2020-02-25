@@ -72,8 +72,9 @@
                 </v-col>
 
                 <v-col :class="`${mate.classColor} black--text`" v-if="memberCheck">
-                    <v-checkbox v-model="mate.event.activityOrz[`${date}`]" 
+                    <v-checkbox v-model="checkValue"
                     :label="mate.name"
+                    :value="mate.name"
                     color="black"
                     class="ma-0 pa-0"
                     hide-details
@@ -193,7 +194,7 @@ export default {
     data: () => ({
       showMenu: false,
       x: 0,
-      y: 0,    
+      y: 0,
       }),
     methods: {
         compareMemberOrz(mate, date) {
@@ -294,7 +295,8 @@ export default {
         },
         tournament: {
             default: false
-        }
+        },
+        checkValue: Array
     },
     computed: {
         ...mapGetters(['mates', 'getOrz', 'getTournament', 'getSiege'])

@@ -5,6 +5,7 @@ import Orz from '../components/Pages/Orz'
 import Siege from '../components/Pages/Siege'
 import MainPage from '../components/Pages/MainPage'
 import AddOrz from '../components/Pages/AddOrz'
+import FillFights from '../components/Pages/fillFights'
 Vue.use(VueRouter)
 
 const routes = [
@@ -35,6 +36,10 @@ const routes = [
   {
     path: '/mainpage',
     component: MainPage
+  },
+  {
+    path: '/fillFights',
+    component: FillFights
   }
 ]
 

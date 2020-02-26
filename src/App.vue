@@ -28,8 +28,8 @@
           <add-new-member></add-new-member>
         </v-list-item>
         <v-list-item class="pl-1 pr-1 flex-wrap">
-          <v-btn class="mt-2" to="/addorz" width="100%">Add Orz</v-btn>
-          <v-btn class="mt-2" to="/fillFights" width="100%">Add fights info</v-btn>
+          <v-btn class="mt-2" to="/fillorz" width="100%">Add Orz</v-btn>
+          <v-btn class="mt-2" to="/filltournament" width="100%">Add fights info</v-btn>
         </v-list-item>
       </v-list>
     </v-menu>

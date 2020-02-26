@@ -284,15 +284,9 @@ export default {
         agaddon: {
             default: false
         },
-        datesArray: {
-            type: Array
-        },
-        date: {
-            type: String
-        },
-        event: {
-            type: String
-        },
+        datesArray:  Array,
+        date: String,
+        event: String,
         tournament: {
             default: false
         },

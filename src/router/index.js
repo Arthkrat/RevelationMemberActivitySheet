@@ -4,8 +4,8 @@ import Tournament from '../components/Pages/Tournament'
 import Orz from '../components/Pages/Orz'
 import Siege from '../components/Pages/Siege'
 import MainPage from '../components/Pages/MainPage'
-import AddOrz from '../components/Pages/AddOrz'
-import FillFights from '../components/Pages/fillFights'
+import FillOrz from '../components/Pages/FillOrz'
+import FillTournament from '../components/Pages/FillTournament'
 Vue.use(VueRouter)
 
 const routes = [
@@ -15,8 +15,8 @@ const routes = [
     redirect: '/mainpage',
   },
   {
-    path: '/addorz',
-    component: AddOrz
+    path: '/fillorz',
+    component: FillOrz
   },
   {
     path: '/orz',
@@ -38,8 +38,8 @@ const routes = [
     component: MainPage
   },
   {
-    path: '/fillFights',
-    component: FillFights
+    path: '/filltournament',
+    component: FillTournament
   }
 ]
 
@@ -50,3 +50,6 @@ const router = new VueRouter({
 })
 
 export default router
+{/* 
+
+     */}

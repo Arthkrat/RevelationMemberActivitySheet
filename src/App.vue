@@ -30,6 +30,8 @@
         <v-list-item class="pl-1 pr-1 flex-wrap">
           <v-btn class="mt-2" to="/fillorz" width="100%">Add Orz</v-btn>
           <v-btn class="mt-2" to="/filltournament" width="100%">Add fights info</v-btn>
+          <v-btn class="mt-2" to="/fillSiege" width="100%">Add siege info</v-btn>
+          <v-btn class="mt-2" to="/fillcentaur" width="100%">Add centaur info</v-btn>
         </v-list-item>
       </v-list>
     </v-menu>

@@ -33,7 +33,7 @@
         <v-checkbox 
         dark 
         v-model="checkedAll" 
-        :label="checkedAll ? 'Check back' : 'Check all' " @click="checkValue"></v-checkbox>
+        :label="checkedAll ? 'Check back' : 'Check all' " @change="checkValue"></v-checkbox>
         <v-row  v-for="(mate, index) in mates" :key="`mate-${index}`" class="text-center" >
                 <v-col :class="`${mate.classColor} black--text`">
                     <v-checkbox v-model="presence"

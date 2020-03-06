@@ -6,6 +6,8 @@ import Siege from '../components/Pages/Siege'
 import MainPage from '../components/Pages/MainPage'
 import FillOrz from '../components/Pages/FillOrz'
 import FillTournament from '../components/Pages/FillTournament'
+import FillSiege from '../components/Pages/FillSiege'
+import FillCentaur from '../components/Pages/FillCentaur'
 Vue.use(VueRouter)
 
 const routes = [
@@ -17,6 +19,14 @@ const routes = [
   {
     path: '/fillorz',
     component: FillOrz
+  },
+  {
+    path: '/fillsiege',
+    component: FillSiege
+  },
+  {
+    path: '/fillcentaur',
+    component: FillCentaur
   },
   {
     path: '/orz',

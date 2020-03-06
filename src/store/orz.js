@@ -15,7 +15,7 @@ export default {
             },
             '2020-02-20': {
                 presence: [
-                    'Kratos', 'Asakura', 'Deadzone', 
+                    'Kratos', 'Asakura', 'Deadzone',
                 ],
                 result: '10000'
             },

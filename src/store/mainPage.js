@@ -70,42 +70,72 @@ export default {
                 classColor: 'light-blue lighten-3'
             },
             {
-                name: 'Asakura',
+                name: 'Asakura1',
                 bm: '600',
                 class: 'Knight',
                 dragon: true,
                 classColor: 'amber lighten-1'
             },
             {
-                name: 'Kratos',
+                name: 'Kratos1',
                 bm: '575',
                 class: 'Mage',
                 dragon: false,
                 classColor: 'light-blue lighten-3'
             },
             {
-                name: 'Deadzone',
+                name: 'Deadzone1',
                 bm: '650',
                 class: 'Assasin',
                 dragon: true,
                 classColor: 'light-blue lighten-1'
             },
             {
-                name: 'sailorFkkyou',
+                name: 'sailorFkkyou1',
                 bm: '700',
                 class: 'Druid',
                 dragon: true,
                 classColor: 'light-green darken-1'
             },
             {
-                name: 'DominiDirth',
+                name: 'DominiDirth1',
                 bm: '600',
                 class: 'Guard',
                 dragon: true,
                 classColor: 'lime accent-1'
             },
             {
-                name: 'Fluder',
+                name: 'Fluder1',
+                bm: '600',
+                class: 'Gunner',
+                dragon: false,
+                classColor: 'deep-orange lighten-3'
+            }
+
+            ,
+            {
+                name: 'Deadzone2',
+                bm: '650',
+                class: 'Assasin',
+                dragon: true,
+                classColor: 'light-blue lighten-1'
+            },
+            {
+                name: 'sailorFkkyou2',
+                bm: '700',
+                class: 'Druid',
+                dragon: true,
+                classColor: 'light-green darken-1'
+            },
+            {
+                name: 'DominiDirth2',
+                bm: '600',
+                class: 'Guard',
+                dragon: true,
+                classColor: 'lime accent-1'
+            },
+            {
+                name: 'Fluder2',
                 bm: '600',
                 class: 'Gunner',
                 dragon: false,

@@ -63,7 +63,7 @@
 
             <v-divider class="white" v-if="memberClass"></v-divider>
             
-            <v-row  v-for="(mate, index) in mates" :key="`mate-${index}`" class="text-center" >
+            <v-row  v-for="(mate, index) in guildMates" :key="`mate-${index}`" class="text-center" >
 
                 <v-col @click.stop="show" :class="`${mate.classColor} black--text`" v-if="member" >
                     <span @click="showMe(mate)">
@@ -208,11 +208,11 @@ export default {
         },
         compareMemberTournament(mate, date, fightNumber) {
             if(fightNumber === 1)
-                return Object.keys(this.getTournament(date).presence.firstFight).indexOf(mate) !== -1 ? true : false
+                return this.getTournament(date).presence.firstFight.filter(item => item.name === mate) !== undefined ? true : false
             else if (fightNumber === 2)
-                return Object.keys(this.getTournament(date).presence.secondFight).indexOf(mate) !== -1 ? true : false
-            else if (fightNumber === 'stock')
-                return this.getTournament(date).presence.stock.indexOf(mate) !== -1 ? true : false
+                return this.getTournament(date).presence.secondFight.filter(item => item.name === mate) !== undefined  ? true : false
+            // else if (fightNumber === 'stock')
+            //     return this.getTournament(date).presence.stock.indexOf(mate) !== -1 ? true : false
         },
         getActivityPercentOrz(mate) {
                 let activityPercent = 0
@@ -225,10 +225,9 @@ export default {
         getActivityPercentTournament(mate) {
             let activityPercent = 0
             for(let date of this.datesArray) {
-                if(
-                Object.keys(this.getTournament(date).presence.firstFight).indexOf(mate) !== -1 ||
-                Object.keys(this.getTournament(date).presence.secondFight).indexOf(mate) !== -1 ||
-                this.getTournament(date).presence.stock.indexOf(mate) !== -1
+                if(this.getTournament(date).presence.firstFight.filter(item => item.name === mate) !== undefined ||
+                this.getTournament(date).presence.secondFight.filter(item => item.name === mate) !== undefined ||
+                this.getTournament(date).presence.stock.indexOf(mate) !== -1 
                 )
                     activityPercent +=1
             }
@@ -293,7 +292,7 @@ export default {
         checkValue: Array
     },
     computed: {
-        ...mapGetters(['mates', 'getOrz', 'getTournament', 'getSiege'])
+        ...mapGetters(['mates', 'getOrz', 'getTournament', 'getSiege', 'guildMates'])
     }
 }
 </script>

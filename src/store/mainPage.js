@@ -1,5 +1,8 @@
 export default {
     state: {
+        guildMates: [
+            'Asakura', 'Kratos', 'Deadzone', 'DominiDirth'
+        ],
         counter : [
             {
                 name: 'Knight',
@@ -144,6 +147,9 @@ export default {
         },
         getRules(state) {
             return state.rulesCard
+        },
+        guildMates(state) {
+            return state.guildMates
         }
         
     },

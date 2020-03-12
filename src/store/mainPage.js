@@ -32,14 +32,6 @@ export default {
                 bm: '600',
                 class: 'Knight',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : true,
-                        '2020-02-20' : true,
-                        '2020-02-27' : true
-                    }
-                },
                 classColor: 'amber lighten-1'
             },
             {
@@ -47,14 +39,6 @@ export default {
                 bm: '575',
                 class: 'Mage',
                 dragon: false,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : false,
-                        '2020-02-20' : true,
-                        '2020-02-27' : true
-                    }
-                },
                 classColor: 'light-blue lighten-3'
             },
             {
@@ -62,14 +46,6 @@ export default {
                 bm: '650',
                 class: 'Assasin',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : false,
-                        '2020-02-13' : true,
-                        '2020-02-20' : true,
-                        '2020-02-27' : false
-                    }
-                },
                 classColor: 'light-blue lighten-1'
             },
             {
@@ -77,14 +53,6 @@ export default {
                 bm: '700',
                 class: 'Druid',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : false,
-                        '2020-02-20' : false,
-                        '2020-02-27' : true
-                    }
-                },
                 classColor: 'light-green darken-1'
             },
             {
@@ -92,14 +60,6 @@ export default {
                 bm: '600',
                 class: 'Guard',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : false,
-                        '2020-02-13' : true,
-                        '2020-02-20' : false,
-                        '2020-02-27' : true
-                    }
-                },
                 classColor: 'lime accent-1'
             },
             {
@@ -107,104 +67,78 @@ export default {
                 bm: '600',
                 class: 'Gunner',
                 dragon: false,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : false,
-                        '2020-02-20' : true,
-                        '2020-02-27' : true
-                    }
-                },
                 classColor: 'light-blue lighten-3'
             },
             {
-                name: 'Asakura',
+                name: 'Asakura1',
                 bm: '600',
                 class: 'Knight',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : true,
-                        '2020-02-20' : true,
-                        '2020-02-27' : false
-                    }
-                },
                 classColor: 'amber lighten-1'
             },
             {
-                name: 'Kratos',
+                name: 'Kratos1',
                 bm: '575',
                 class: 'Mage',
                 dragon: false,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : false,
-                        '2020-02-20' : true,
-                        '2020-02-27' : true
-                    }
-                },
                 classColor: 'light-blue lighten-3'
             },
             {
-                name: 'Deadzone',
+                name: 'Deadzone1',
                 bm: '650',
                 class: 'Assasin',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : false,
-                        '2020-02-13' : false,
-                        '2020-02-20' : true,
-                        '2020-02-27' : true
-                    }
-                },
                 classColor: 'light-blue lighten-1'
             },
             {
-                name: 'sailorFkkyou',
+                name: 'sailorFkkyou1',
                 bm: '700',
                 class: 'Druid',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : false,
-                        '2020-02-13' : false,
-                        '2020-02-20' : false,
-                        '2020-02-27' : false
-                    }
-                },
                 classColor: 'light-green darken-1'
             },
             {
-                name: 'DominiDirth',
+                name: 'DominiDirth1',
                 bm: '600',
                 class: 'Guard',
                 dragon: true,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : true,
-                        '2020-02-20' : true,
-                        '2020-02-27' : false
-                    }
-                },
                 classColor: 'lime accent-1'
             },
             {
-                name: 'Fluder',
+                name: 'Fluder1',
                 bm: '600',
                 class: 'Gunner',
                 dragon: false,
-                event: {
-                    activityOrz: {
-                        '2020-02-06' : true,
-                        '2020-02-13' : false,
-                        '2020-02-20' : true,
-                        '2020-02-27' : false
-                    }
-                },
+                classColor: 'deep-orange lighten-3'
+            }
+
+            ,
+            {
+                name: 'Deadzone2',
+                bm: '650',
+                class: 'Assasin',
+                dragon: true,
+                classColor: 'light-blue lighten-1'
+            },
+            {
+                name: 'sailorFkkyou2',
+                bm: '700',
+                class: 'Druid',
+                dragon: true,
+                classColor: 'light-green darken-1'
+            },
+            {
+                name: 'DominiDirth2',
+                bm: '600',
+                class: 'Guard',
+                dragon: true,
+                classColor: 'lime accent-1'
+            },
+            {
+                name: 'Fluder2',
+                bm: '600',
+                class: 'Gunner',
+                dragon: false,
                 classColor: 'deep-orange lighten-3'
             }
         ],
@@ -253,11 +187,19 @@ export default {
                 }
             
             }
+        },
+        changeDateActivityOrz(state, payload) {
+            for (let mate of state.mates) {
+                mate.event.activityOrz[`${payload.date}`] = payload.status
+            }
         }
     },
     actions: {
         CLASSCOUNT(context) {
             context.commit('classCount')
+        },
+        CHANGEDATEACTIVITYORZ({commit}, payload) {
+            commit('changeDateActivityOrz', payload)
         }
     }
 }

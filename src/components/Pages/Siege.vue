@@ -37,16 +37,17 @@
                 >
                 </member-list>
             </v-col>
-            <v-col cols="1" v-for="(date, i) in dates" :key="`${i}-date`">
+            <v-col cols="2" v-for="(date, i) in dates" :key="`${i}-date`">
                 <member-list
-                :orz="true"
+                :siege="true"
                 :date="date"
                 >
                 </member-list>
             </v-col>
             <v-col cols="1" v-if="dates.length">
                 <member-list
-                :percent="dates"
+                :datesArray="dates"
+                event="siege"
                 >
                 </member-list>
             </v-col>
@@ -56,14 +57,10 @@
 </template>
 <script>
 import moment from 'moment'
-import {mapGetters} from 'vuex'
 import MemberList from '../Shared/MemberList'
 export default {
     components: {
         'member-list' : MemberList
-    },
-    computed: {
-        ...mapGetters(['mates'])
     },
     data: () => ({
       dates: [],
@@ -71,7 +68,7 @@ export default {
     }),
     methods: {
     allowedDays(val) {
-           return moment(val).format('dddd, MMMM Do YYYY').split(',')[0] === 'Thursday'
+           return moment(val).format('dddd, MMMM Do YYYY').split(',')[0] === 'Saturday'
         }
     }
 }

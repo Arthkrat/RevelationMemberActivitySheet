@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Activity from '../components/Pages/Activity'
-import Centaur from '../components/Pages/Centaur'
-import Agate from '../components/Pages/Agate'
+import Tournament from '../components/Pages/Tournament'
+import Orz from '../components/Pages/Orz'
+import Siege from '../components/Pages/Siege'
 import MainPage from '../components/Pages/MainPage'
-import AddOrz from '../components/Pages/AddOrz'
+import FillOrz from '../components/Pages/FillOrz'
+import FillTournament from '../components/Pages/FillTournament'
+import FillSiege from '../components/Pages/FillSiege'
+import FillCentaur from '../components/Pages/FillCentaur'
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,27 +17,39 @@ const routes = [
     redirect: '/mainpage',
   },
   {
-    path: '/addorz',
-    component: AddOrz
+    path: '/fillorz',
+    component: FillOrz
   },
   {
-    path: '/centaur',
+    path: '/fillsiege',
+    component: FillSiege
+  },
+  {
+    path: '/fillcentaur',
+    component: FillCentaur
+  },
+  {
+    path: '/orz',
     name: 'centaur',
-    component: Centaur
+    component: Orz
   },
   {
-    path: '/agate',
-    name: 'agate',
-    component: Agate
+    path: '/siege',
+    name: 'siege',
+    component: Siege
   },
   {
-    path: '/activity',
-    name: 'activity',
-    component: Activity
+    path: '/tournament',
+    name: 'tournament',
+    component: Tournament
   },
   {
     path: '/mainpage',
     component: MainPage
+  },
+  {
+    path: '/filltournament',
+    component: FillTournament
   }
 ]
 
@@ -45,3 +60,6 @@ const router = new VueRouter({
 })
 
 export default router
+{/* 
+
+     */}

@@ -1,7 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="1" class="ml-5">
-      <form>
+    <v-col class="ml-5">
         <v-menu
           ref="menu1"
           v-model="menu1"
@@ -34,19 +33,31 @@
         dark 
         v-model="checkedAll" 
         :label="checkedAll ? 'Check back' : 'Check all' " @change="checkValue"></v-checkbox>
-        <v-row  v-for="(mate, index) in mates" :key="`mate-${index}`" class="text-center" >
-                <v-col :class="`${mate.classColor} black--text`">
-                    <v-checkbox v-model="presence"
-                    :label="mate.name"
-                    :value="mate.name"
-                    color="black"
-                    class="ma-0 pa-0"
-                    hide-details
-                    ></v-checkbox>
-                </v-col>
+        <v-container style="background-color: #212121"  fluid>
+        <v-checkbox
+        dark
+        v-model="checkedAll"
+        :label="checkedAll ? 'Check back' : 'Check all' " @change="checkValue"></v-checkbox>
+        <v-row  class="text-center"
+        align="stretch"
+        justify="start"
+        style="height: 55vh; flex-direction: column; align-content: start">
+          <v-col
+          cols="1"
+          v-for="(mate, index) in mates"
+          :key="`mate-${index}`"
+          :class="`${mate.classColor} black--text mr-12 mb-2`">
+              <v-checkbox v-model="presence"
+              :label="mate.name"
+              :value="mate.name"
+              color="black"
+              class=" ma-0 pa-0"
+              hide-details
+              ></v-checkbox>
+            </v-col>
         </v-row>
+         </v-container>
         <v-btn width="100%" class="mt-3">submit</v-btn>
-      </form>
     </v-col>
   </v-row>
 </template>

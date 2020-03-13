@@ -6,6 +6,98 @@ export default {
                 presence: {
                     firstFight: [
                         {
+                            name: 'sailorFkkyou',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Asakura',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Softporn',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'PupamegaPidaras',
+                            damage: '100000000123',
+                            kills: '100123',
+                            heal: '500000',
+                            assists: '50012'
+                        }
+                    ],
+                    secondFight : [
+                        {
+                            name: 'Kratos',
+                            damage: '1001000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Deadzone',
+                            damage: '1012000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'RibaFugu',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Asakura',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Softporn',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'PupamegaPidaras',
+                            damage: '100000000123',
+                            kills: '100123',
+                            heal: '500000',
+                            assists: '50012'
+                        }
+                    ],
+                    stock: ['Fluder', 'MoonRi', 'Aserty']
+                    
+                },
+                firstEnemy: 'Sabotage',
+                firstWin: true,
+                secondEnemy: 'Advent',
+                secondWin: false
+            },
+            '2020-02-14': {
+                presence: {
+                    firstFight: [
+                        {
                             name: 'Kratos',
                             damage: '1001000',
                             kills: '100',
@@ -102,190 +194,98 @@ export default {
                 secondEnemy: 'Advent',
                 secondWin: false
             },
-            '2020-02-14': {
-                presence: {
-                    firstFight: {
-                        'Kratos' : {
-                            damage: '1001000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Deadzone' : {
-                            damage: '1012000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'RibaFugu' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Asakura' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Softporn' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'PupamegaPidaras' : {
-                            damage: '100000000123',
-                            kills: '100123',
-                            heal: '500000',
-                            assists: '50012',
-                        },
-                    },
-                    secondFight: {
-                        'Kratos' : {
-                            damage: '1001000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Deadzone' : {
-                            damage: '1012000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'RibaFugu' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Asakura' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Softporn' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'PupamegaPidaras' : {
-                            damage: '100000000123',
-                            kills: '100123',
-                            heal: '500000',
-                            assists: '50012',
-                        }
-                    },
-                    stock: ['Fluder', 'MoonRi', 'Aserty']
-                    
-                },
-                firstEnemy: 'Sabotage',
-                firstWin: true,
-                secondEnemy: 'Advent',
-                secondWin: false
-            },
             '2020-02-21': {
                 presence: {
-                    firstFight: {
-                        'Kratos' : {
+                    firstFight: [
+                        {
+                            name: 'Kratos',
                             damage: '1001000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Deadzone' : {
-                            damage: '1012000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'RibaFugu' : {
+                        {
+                            name: 'sailorFkkyou',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Asakura' : {
+                        {
+                            name: 'Asakura',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Softporn' : {
+                        {
+                            name: 'Softporn',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'PupamegaPidaras' : {
+                        {
+                            name: 'PupamegaPidaras',
                             damage: '100000000123',
                             kills: '100123',
                             heal: '500000',
-                            assists: '50012',
-                        },
-                    },
-                    secondFight: {
-                        'Kratos' : {
-                            damage: '1001000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Deadzone' : {
-                            damage: '1012000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'RibaFugu' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Asakura' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Softporn' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'PupamegaPidaras' : {
-                            damage: '100000000123',
-                            kills: '100123',
-                            heal: '500000',
-                            assists: '50012',
+                            assists: '50012'
                         }
-                    },
+                    ],
+                    secondFight : [
+                        {
+                            name: 'Kratos',
+                            damage: '1001000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Deadzone',
+                            damage: '1012000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'RibaFugu',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Asakura',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Softporn',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'PupamegaPidaras',
+                            damage: '100000000123',
+                            kills: '100123',
+                            heal: '500000',
+                            assists: '50012'
+                        }
+                    ],
                     stock: ['Fluder', 'MoonRi', 'Aserty']
                     
                 },
@@ -296,92 +296,96 @@ export default {
             },
             '2020-02-28': {
                 presence: {
-                    firstFight: {
-                        'Kratos' : {
+                    firstFight: [
+                        {
+                            name: 'Kratos',
                             damage: '1001000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Deadzone' : {
-                            damage: '1012000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'RibaFugu' : {
+                        {
+                            name: 'sailorFkkyou',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Asakura' : {
+                        {
+                            name: 'Asakura',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Softporn' : {
+                        {
+                            name: 'Softporn',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'PupamegaPidaras' : {
-                            damage: '100000000123',
-                            kills: '100123',
-                            heal: '500000',
-                            assists: '50012',
-                        },
-                    },
-                    secondFight: {
-                        'Kratos' : {
-                            damage: '1001000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Deadzone' : {
-                            damage: '1012000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'RibaFugu' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Asakura' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'Softporn' : {
-                            damage: '10000000',
-                            kills: '100',
-                            heal: '500000',
-                            assists: '500',
-                            
-                        },
-                        'PupamegaPidaras' : {
+                        {
+                            name: 'PupamegaPidaras',
                             damage: '100000000123',
                             kills: '100123',
                             heal: '500000',
                             assists: '50012'
                         }
-                    },
+                    ],
+                    secondFight : [
+                        {
+                            name: 'Kratos',
+                            damage: '1001000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Deadzone',
+                            damage: '1012000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'RibaFugu',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Asakura',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'Softporn',
+                            damage: '10000000',
+                            kills: '100',
+                            heal: '500000',
+                            assists: '500',
+                            
+                        },
+                        {
+                            name: 'PupamegaPidaras',
+                            damage: '100000000123',
+                            kills: '100123',
+                            heal: '500000',
+                            assists: '50012'
+                        }
+                    ],
                     stock: ['Fluder', 'MoonRi', 'Aserty']
                     
                 },

@@ -63,7 +63,7 @@
 
             <v-divider class="white" v-if="memberClass"></v-divider>
             
-            <v-row  v-for="(mate, index) in guildMates" :key="`mate-${index}`" class="text-center" >
+            <v-row  v-for="(mate, index) in mates" :key="`mate-${index}`" class="text-center" >
 
                 <v-col @click.stop="show" :class="`${mate.classColor} black--text`" v-if="member" >
                     <span @click="showMe(mate)">
@@ -208,9 +208,9 @@ export default {
         },
         compareMemberTournament(mate, date, fightNumber) {
             if(fightNumber === 1)
-                return this.getTournament(date).presence.firstFight.filter(item => item.name === mate) !== undefined ? true : false
+                return this.getTournament(date).presence.firstFight.filter(item => item.name === mate)[0] !== undefined ? true : false
             else if (fightNumber === 2)
-                return this.getTournament(date).presence.secondFight.filter(item => item.name === mate) !== undefined  ? true : false
+                return this.getTournament(date).presence.secondFight.filter(item => item.name === mate)[0] !== undefined ? true : false
             // else if (fightNumber === 'stock')
             //     return this.getTournament(date).presence.stock.indexOf(mate) !== -1 ? true : false
         },

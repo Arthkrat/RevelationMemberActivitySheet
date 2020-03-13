@@ -113,9 +113,7 @@ export default {
                 class: 'Gunner',
                 dragon: false,
                 classColor: 'deep-orange lighten-3'
-            }
-
-            ,
+            },
             {
                 name: 'Deadzone2',
                 bm: '650',

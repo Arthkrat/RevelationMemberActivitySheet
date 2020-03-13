@@ -1,87 +1,99 @@
+/* eslint-disable no-console */
 export default {
     state: {
         tournament: {
             '2020-02-07': {
                 presence: {
-                    firstFight: {
-                        'Kratos' : {
+                    firstFight: [
+                        {
+                            name: 'Kratos',
                             damage: '1001000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'sailorFkkyou' : {
+                        {
+                            name: 'sailorFkkyou',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Asakura' : {
+                        {
+                            name: 'Asakura',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Softporn' : {
+                        {
+                            name: 'Softporn',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'PupamegaPidaras' : {
+                        {
+                            name: 'PupamegaPidaras',
                             damage: '100000000123',
                             kills: '100123',
                             heal: '500000',
                             assists: '50012'
-                        },
-                    },
-                    secondFight: {
-                        'Kratos' : {
+                        }
+                    ],
+                    secondFight : [
+                        {
+                            name: 'Kratos',
                             damage: '1001000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Deadzone' : {
+                        {
+                            name: 'Deadzone',
                             damage: '1012000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'RibaFugu' : {
+                        {
+                            name: 'RibaFugu',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Asakura' : {
+                        {
+                            name: 'Asakura',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'Softporn' : {
+                        {
+                            name: 'Softporn',
                             damage: '10000000',
                             kills: '100',
                             heal: '500000',
                             assists: '500',
                             
                         },
-                        'PupamegaPidaras' : {
+                        {
+                            name: 'PupamegaPidaras',
                             damage: '100000000123',
                             kills: '100123',
                             heal: '500000',
                             assists: '50012'
                         }
-                    },
+                    ],
                     stock: ['Fluder', 'MoonRi', 'Aserty']
                     
                 },
@@ -385,5 +397,27 @@ export default {
         getTournament: state => date => {
             return state.tournament[`${date}`]
           }
+    },
+    mutations: {
+        setTournament(state, payload) {
+            state.tournament[`${payload.date}`] = {}
+            state.tournament[`${payload.date}`].presence = {},
+            state.tournament[`${payload.date}`].presence.firstFight = [],
+            state.tournament[`${payload.date}`].presence.secondFight = [],
+            state.tournament[payload.date].presence.stock = []
+            state.tournament[`${payload.date}`].presence.firstFight = payload.firstFight
+            state.tournament[payload.date].presence.secondFight = payload.secondFight
+            state.tournament[payload.date].presence.firstEnemy = payload.firstEnemy
+            state.tournament[payload.date].presence.secondEnemy = payload.secondEnemy
+            state.tournament[payload.date].presence.stock = payload.stock
+            state.tournament[payload.date].presence.firstWin = payload.firstWin
+            state.tournament[payload.date].presence.secondWin = payload.secondWin
+            
+        }
+    },
+    actions: {
+        SETTOURNAMENT({commit}, payload) {
+            commit('setTournament', payload)
+        }
     }
 }

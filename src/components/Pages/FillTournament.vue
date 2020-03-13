@@ -1,8 +1,6 @@
 <template>
   <v-row>
     <v-col  class="ml-5">
-      <form>
-      <v-toolbar flat color="black" height="100px">
         <v-row align="center">
           <v-col cols="1">
           <v-menu
@@ -18,7 +16,6 @@
                 <v-text-field
                   v-model="date"
                   label="Date"
-                  hint="MM/DD/YYYY format"
                   persistent-hint
                   v-on="on"
                   dark
@@ -27,31 +24,12 @@
               </template>
               <v-date-picker
                 v-model="date"
-                no-title
                 @input="menu1 = false"
-                @click:date="changeDate"
                 :allowed-dates="allowedDays"
               ></v-date-picker>
             </v-menu>
           </v-col>
-             <v-divider
-          class="mx-4 ml-10"
-          inset
-          vertical
-        ></v-divider>
-          <v-col cols="5">
-            <v-toolbar-title class="text-center white--text">First fight</v-toolbar-title>
-          </v-col>
-             <v-divider
-          class="mx-4 ml-10"
-          inset
-          vertical
-        ></v-divider>
-           <v-col cols="4">
-            <v-toolbar-title class="text-center white--text">Second fight</v-toolbar-title>
-          </v-col>
         </v-row>
-      </v-toolbar>
       <v-tabs dark>
         <v-tab background-color="black">
           First fight
@@ -59,259 +37,146 @@
         <v-tab >
           Second fight
         </v-tab>
-        <v-tab-item >
+        <v-tab-item style="background-color: #212121">
+
           <v-data-table
-            v-model="selected"
-            :headers="headersFirstFight"
-            :items="desserts"
+            v-model="selectedFirst"
+            :headers="headers"
+            :items="presenceFirst"
             :single-select="singleSelect"
             item-key="name"
             show-select
             class="elevation-1"
             dark
           >
-          <template v-slot:item.name="{ item }">
-              <v-chip label :color="getColor(item.name)" dark>{{ item.name }}</v-chip>
+            <template v-slot:top>
+              <v-text-field type="text" v-model="enemyFirst" label="Enemy"></v-text-field>
             </template>
-            <template v-slot:item.damage_first="{ item }">
-              <v-text-field type="number" v-model.number="item.damage_first"></v-text-field>
+            <template v-slot:item.name="{ item }">
+              <v-chip label dark>{{ item.name }}</v-chip>
             </template>
-            <template v-slot:item.kill_first="{ item }">
-              <v-text-field type="number" v-model.number="item.kill_first"></v-text-field>
+            <template v-slot:item.damage="{ item }">
+              <v-text-field type="number" v-model.number="item.damage"></v-text-field>
             </template>
-            <template v-slot:item.heal_first="{ item }">
-              <v-text-field type="number" v-model.number="item.heal_first"></v-text-field>
+            <template v-slot:item.kill="{ item }">
+              <v-text-field type="number" v-model.number="item.kill"></v-text-field>
             </template>
-            <template v-slot:item.assistance_first="{ item }">
-              <v-text-field type="number" v-model.number="item.assistance_first"></v-text-field>
+            <template v-slot:item.heal="{ item }">
+              <v-text-field type="number" v-model.number="item.heal"></v-text-field>
+            </template>
+            <template v-slot:item.assists="{ item }">
+              <v-text-field type="number" v-model.number="item.assists"></v-text-field>
             </template>
           </v-data-table>
-          
         </v-tab-item>
-        <v-tab-item>
+        <v-tab-item style="background-color: #212121">
            <v-data-table
-              v-model="selected"
-              :headers="headersSecondFight"
-              :items="desserts"
+              v-model="selectedSecond"
+              :headers="headers"
+              :items="presenceSecond"
               :single-select="singleSelect"
               item-key="name"
               show-select
               class="elevation-1"
               dark
             >
-            <template v-slot:item.damage_second="{ item }">
-              <v-text-field type="number" v-model.number="item.damage_second"></v-text-field>
+          <template v-slot:top>
+            <v-text-field type="text" v-model="enemySecond" label="Enemy"></v-text-field>
+          </template>
+          <template v-slot:item.name="{ item }">
+              <v-chip label dark>{{ item.name }}</v-chip>
             </template>
-            <template v-slot:item.kill_second="{ item }">
-              <v-text-field type="number" v-model.number="item.kill_second"></v-text-field>
+            <template v-slot:item.damage="{ item }">
+              <v-text-field type="number" v-model.number="item.damage"></v-text-field>
             </template>
-            <template v-slot:item.heal_second="{ item }">
-              <v-text-field type="number" v-model.number="item.heal_second"></v-text-field>
+            <template v-slot:item.kill="{ item }">
+              <v-text-field type="number" v-model.number="item.kill"></v-text-field>
             </template>
-            <template v-slot:item.assistance_second="{ item }">
-              <v-text-field type="number" v-model.number="item.assistance_second"></v-text-field>
+            <template v-slot:item.heal="{ item }">
+              <v-text-field type="number" v-model.number="item.heal"></v-text-field>
+            </template>
+            <template v-slot:item.assists="{ item }">
+              <v-text-field type="number" v-model.number="item.assists"></v-text-field>
             </template>
           </v-data-table>
         </v-tab-item>
       </v-tabs>
-        <v-btn dark width="100%" class="mt-3">submit</v-btn>
-      </form>
+        <v-btn dark width="100%" class="mt-3" @click="submitTournament">submit</v-btn>
     </v-col>
   </v-row>
 </template>
 <script>
 import moment from "moment";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
-      date: "2020-02-06",
+      date: "2020-02-07",
+      enemyFirst: '',
+      enemySecond: '',
       menu1: false,
       menu2: false,
       checkedAll: false,
-      presence: [],
+      presenceFirst: [],
+      presenceSecond: [],
       singleSelect: false,
-        selected: [],
-        headersFirstFight: [
+        selectedFirst: [],
+        selectedSecond: [],
+        headers: [
           {
             text: 'Character',
             align: 'left',
             sortable: false,
             value: 'name',
           },
-          { text: 'Damage', value: 'damage_first' },
-          { text: 'Kill', value: 'kill_first' },
-          { text: 'Heal', value: 'heal_first' },
-          { text: 'Assistance', value: 'assistance_first' }
-        ],
-        headersSecondFight: [
-          {
-            text: 'Character',
-            align: 'left',
-            sortable: false,
-            value: 'name',
-          },
-          { text: 'Damage', value: 'damage_second' },
-          { text: 'Kill', value: 'kill_second' },
-          { text: 'Heal', value: 'heal_second' },
-          { text: 'Assistance', value: 'assistance_second' },
-        ],
-        desserts: [
-          {
-            name: 'Frozen Yogurt',
-            damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Ice cream sandwich',
-             damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Eclair',
-             damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Cupcake',
-             damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Gingerbread',
-            damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Jelly bean',
-             damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Lollipop',
-            damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Honeycomb',
-             damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'Donut',
-            damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-          {
-            name: 'KitKat',
-             damage_first: 159,
-            damage_second: 159,
-            kill_first: 6.0,
-            kill_second: 6.0,
-            heal_first: 24,
-            heal_second: 24,
-            assistance_first: 4.0,
-            assistance_second: 4.0,
-          },
-        ],
+          { text: 'Damage', value: 'damage' },
+          { text: 'Kill', value: 'kill' },
+          { text: 'Heal', value: 'heal' },
+          { text: 'Assistance', value: 'assists' }
+        ]
     };
   },
   computed: {
-    ...mapGetters(["mates", "getOrz"]),
-    computedDateFormatted() {
-      return this.formatDate(this.date);
+    ...mapGetters(["getTournament", 'guildMates']),
+    getTournamentFirstFight() {
+      return this.getTournament(this.date).presence.firstFight
     },
-  },
-  watch: {
-    date() {
-      this.dateFormatted = this.formatDate(this.date);
+    getTournamentSecondFight() {
+      return this.getTournament(this.date).presence.secondFight
     }
   },
   created() {
-    this.presence = this.getOrz(this.date).presence;
+    this.presenceFirst = [...this.guildMates] 
+    this.presenceSecond   = [...this.guildMates] 
+    this.presenceFirst = this.mapArray(this.presenceFirst)
+    this.presenceSecond = this.mapArray(this.presenceSecond)
   },
   methods: {
-    getColor (color) {
-        if (color > 400) return 'red'
-        else if (color > 200) return 'orange'
-        else return 'green'
+    ...mapActions(['SETTOURNAMENT']),
+      allowedDays(val) {
+           return moment(val).format('dddd, MMMM Do YYYY').split(',')[0] === 'Friday'
       },
-    changeDate(){
-      this.checkedAll = false
-       this.presence = this.getOrz(this.date).presence;
-    },
-    allowedDays(val) {
-      return (
-        moment(val)
-          .format("dddd, MMMM Do YYYY")
-          .split(",")[0] === "Thursday"
-      );
-    },
-    formatDate(date) {
-      if (!date) return null;
-
-      const [year, month, day] = date.split("-");
-      return `${month}/${day}/${year}`;
-    },
-    parseDate(date) {
-      if (!date) return null;
-      const [month, day, year] = date.split("/");
-      return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
-    }
+      submitTournament() {
+        this.SETTOURNAMENT({
+          date: this.date,
+          firstFight: this.selectedFirst,
+          secondFight: this.selectedSecond,
+          firstEnemy: this.enemyFirst,
+          secondEnemy: this.enemySecond,
+          firstWin: true,
+          secondWin: false
+        })
+      },
+      mapArray(array) {
+       return array.map(item => 
+      ({
+        'name': item,
+        'damage': 0,
+        'kill': 0,
+        'heal': 0,
+        'assists': 0
+        }))
+      }
   }
 };
-</script>
+</script>  
